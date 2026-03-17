@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisiWinNET.Settings version="1.0">
+  <Section name="SolutionSettings">
+    <Entry name="SelectedDeviceCommunicator" type="System.String" value="ServerManager" />
+  </Section>
+</VisiWinNET.Settings>
