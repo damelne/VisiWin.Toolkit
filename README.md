@@ -1,1 +1,84 @@
 # VisiWin.Toolkit
+
+**VisiWin.Toolkit** is an open-source toolkit for **VisiWin projects (Inosoft)**.  
+It provides reusable components, utilities, and patterns to improve structure, maintainability, and type safety in HMI applications.
+
+> ⚡ The toolkit is continuously evolving and will be extended with additional modules over time.
+
+---
+
+## 📦 Projects
+
+### 🔹 PlcSymbol
+
+Provides a **type-safe way to define and use PLC symbols** instead of relying on raw string paths from VisiWin variable definitions.
+
+#### Features
+
+- Central **definition class** for PLC variables
+- Supports:
+  - ✔ Single symbols (`PlcSymbol`)
+  - ✔ Array symbols (`PlcArraySymbol`)
+- Optional **array bounds validation**
+- Seamless usage in:
+  - XAML (via `MarkupExtension`)
+  - MVVM / adapters
+
+---
+
+#### 🔧 Example: Definition Class
+
+```csharp
+namespace HMI.PlcSymbols
+{
+    public static class Definitions
+    {
+        public static PlcSymbol MyVariable { get; } = new PlcSymbol("MyVariable");
+        public static PlcArraySymbol MyArrayVariable { get; } = new PlcArraySymbol("MyArray", 3);
+    }
+}
+```
+
+---
+
+#### 🔧 Usage
+
+**In code (adapter / MVVM):**
+
+```csharp
+_variableService.SetValueAsync(PlcSymbols.Definitions.MyVariable, "VariableValueFromAdapter").Wait();
+```
+
+**In XAML:**
+
+```xml
+<vw:TextVarIn
+    LabelText="VarIn MyVariable"
+    VariableName="{plcsym:PlcSymbolPath Symbol={x:Static plc:Definitions.MyVariable}}" />
+
+<vw:TextVarOut
+    LabelText="VarOut MyVariable"
+    VariableName="{plcsym:PlcSymbolPath Symbol={x:Static plc:Definitions.MyVariable}}" />
+
+<vw:NumericVarIn
+    LabelText="VarIn Array[0]"
+    VariableName="{plcsym:PlcSymbolPath Symbol={x:Static plc:Definitions.MyArrayVariable}, Index=0}" />
+```
+
+---
+
+#### 🎮 Demo Project
+
+**`VisiWin.Toolkit.Demo.PlcSymbol`**
+
+A standalone demo project demonstrating the usage of `PlcSymbol` and `PlcArraySymbol` in a real VisiWin HMI context.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to help improve the toolkit.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).

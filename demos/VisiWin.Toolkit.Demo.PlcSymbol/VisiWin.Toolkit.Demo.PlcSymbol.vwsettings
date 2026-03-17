@@ -116,6 +116,26 @@
             <Entry name="order" type="System.Int32" value="1" />
             <Entry name="width" type="System.Int32" value="163" />
           </Section>
+          <Section name="DefaultVal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="MaxValItem">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="MinValItem">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="OPCUAAccessRights">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
         </Section>
         <Section name="GroupNode">
           <Section name="ReadMode">
@@ -1670,6 +1690,13 @@
             <Entry name="order" type="System.Int32" value="6" />
             <Entry name="width" type="System.Int32" value="100" />
           </Section>
+        </Section>
+      </Section>
+    </Section>
+    <Section name="DataAccess">
+      <Section name="Channels">
+        <Section name="Ch1">
+          <Entry name="Browser" type="System.String" value="NET\SiemensS7\VisiWin.S7.Brw.dll" />
         </Section>
       </Section>
     </Section>
