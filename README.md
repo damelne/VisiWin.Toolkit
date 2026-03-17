@@ -1,6 +1,6 @@
 # VisiWin.Toolkit
 
-**VisiWin.Toolkit** is an open-source toolkit for **VisiWin projects (Inosoft)**.  
+**VisiWin.Toolkit** is an open-source toolkit for **VisiWin (WPF/Modern UI) projects (Inosoft)**.  
 It provides reusable components, utilities, and patterns to improve structure, maintainability, and type safety in HMI applications.
 
 > ⚡ The toolkit is continuously evolving and will be extended with additional modules over time.
