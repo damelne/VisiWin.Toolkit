@@ -59,11 +59,16 @@ namespace HMI.PlcSymbols
 ---
 
 #### 🔧 Usage
+> [!NOTE]
+> **Variable Browser Config:** Import arrays as single elements!
+>
+> <img width="414" height="514" alt="Variable Browser Config" src="https://github.com/user-attachments/assets/c959f98c-7f46-474a-b3d3-97fb72775f36" />
+
 
 **In code (adapter / MVVM):**
 
 ```csharp
-_variableService.SetValueAsync(PlcSymbols.Definitions.MyVariable, "VariableValueFromAdapter").Wait();
+await _variableService.SetValueAsync(PlcSymbols.Definitions.MyVariable, "VariableValueFromAdapter");
 ```
 
 **In XAML:**
