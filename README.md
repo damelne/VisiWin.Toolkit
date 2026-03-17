@@ -9,6 +9,23 @@ It provides reusable components, utilities, and patterns to improve structure, m
 
 ## 📦 Projects
 
+### 🔹 ModernUI(WPF) Helper (MarkupExtensions, Converter...)
+
+Coming soon...
+
+### 🔹 Controls
+
+Coming soon...
+
+### 🔹 MEF Microsoft.DependencyInjection Adapter
+
+Coming soon...
+
+### 🔹 AsyncAdapter, AsyncService
+
+Base classes for adapters and services that want to implement asynchronous logic in the adapter and service hooks (e.g. OnViewAttached, OnViewDetached, etc.).
+Coming soon...
+
 ### 🔹 PlcSymbol
 
 Provides a **type-safe way to define and use PLC symbols** instead of relying on raw string paths from VisiWin variable definitions.
