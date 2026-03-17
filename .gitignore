@@ -10,6 +10,32 @@
 *.userosscache
 *.sln.docstates
 
+# VisiWin
+*.vwa
+*.vwh
+*.vaa
+*.vwl
+*.vwy
+*.VWY
+*.rt7
+*.rtvw7
+*.UserLog.txt
+*.Device.config
+*.vwsettings
+*.ldb
+
+# VisiWin Variablen Browser-Log 
+#S7_Brw_Logger.txt
+#CoDeSysLogger.txt
+#BeckhoffXML-Logger.txt
+#OPCUALogger.txt
+#PVILogger.txt
+*Logger.txt
+
+
+# Siemens
+*.tia
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
