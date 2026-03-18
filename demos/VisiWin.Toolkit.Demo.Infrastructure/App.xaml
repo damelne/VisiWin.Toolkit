@@ -1,0 +1,21 @@
+﻿<Application x:Class="HMI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vw="http://inosoft.com/visiwin7"
+             xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/VisiWin.Toolkit.Demo.Infrastructure;component/Resources/SymbolResources.xaml"/>
+                <ResourceDictionary Source="/VisiWin.Toolkit.Demo.Infrastructure;component/Resources/BrushLists.xaml" />
+                <ResourceDictionary Source="/VisiWin.Toolkit.Demo.Infrastructure;component/Resources/SymbolLists.xaml" />
+                <ResourceDictionary Source="/VisiWin.Toolkit.Demo.Infrastructure;component/Resources/TextLists.xaml" />
+                <ResourceDictionary Source="/VisiWin.Toolkit.Demo.Infrastructure;component/Resources/System/ConverterResources.xaml" />        
+                <ResourceDictionary Source="/VisiWin.Toolkit.Demo.Infrastructure;component/Resources/LocalizedResources/TouchKeyboardLayoutResources.de-de.xaml"/>
+                <ResourceDictionary Source="/VisiWin7.PlainStyles.WPF;component/Styling.xaml" />        
+                <ResourceDictionary Source="/VisiWin.Toolkit.Demo.Infrastructure;component/Resources/Default_Theme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <vw:ApplicationManager x:Key="ApplicationManager" ProjectName="VisiWin.Toolkit.Demo.Infrastructure" SplashWindowEnabled="True" UseTouchkeyboard="True"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

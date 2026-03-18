@@ -18,15 +18,15 @@ namespace VisiWin.Toolkit.Infrastructure
     ///
     /// Derived classes should override the provided async methods instead of the synchronous ones.
     /// </remarks>
-    public abstract class AsyncServiceBaseEx : ServiceBase
+    public abstract class AsyncServiceBase : ServiceBase
     {
         #region Private Fields
 
         /// <summary>
         /// Optional logger, injected via MEF if available.
         /// </summary>
-        [Import(typeof(ILogger<AsyncServiceBaseEx>), AllowDefault = true)]
-        private ILogger<AsyncServiceBaseEx> _logger { get; set; }
+        [Import(typeof(ILogger<AsyncServiceBase>), AllowDefault = true)]
+        private ILogger<AsyncServiceBase> _logger { get; set; }
 
         #region Locks for serialization
 

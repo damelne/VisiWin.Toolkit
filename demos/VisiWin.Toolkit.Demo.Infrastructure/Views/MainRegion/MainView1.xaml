@@ -1,0 +1,53 @@
+﻿<vw:View x:Class="HMI.MainView1"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:local="clr-namespace:HMI"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:plcsym="http://visiwin/toolkit"
+         xmlns:vw="http://inosoft.com/visiwin7"
+          d:DataContext="{d:DesignInstance Type=local:MainViewAdapter}"
+         MinWidth="1024"
+         MinHeight="588"
+         mc:Ignorable="d">
+
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="MainViewAdapter" />
+    </vw:View.DataContext>
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <vw:PictureBox Width="80"
+                       Height="80"
+                       Margin="8,8,0,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       SymbolResourceKey="InvertedHomeButtonIcon" />
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <StackPanel>
+                <vw:Label Text="MyValue from Adapter:"/>
+                <vw:Label Text="{Binding Path=MyValue}"/>
+
+                <vw:Label Text="BackgroundTaskCounter from MyAppService:"/>
+                <vw:Label Text="{vw:ServiceBinding  Type={x:Type local:IMyAppService},Path=BackgroundTaskCounter}"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</vw:View>
