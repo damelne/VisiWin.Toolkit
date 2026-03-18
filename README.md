@@ -56,7 +56,7 @@ public class MainViewAdapter : AsyncAdapterBase
 {
      public override async Task OnViewAttachedAsync(IView view)
      {
-         base.OnViewAttachedAsync(view);
+         await base.OnViewAttachedAsync(view);
          await Task.Delay(1000); //your async code
      }
 }
