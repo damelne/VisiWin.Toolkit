@@ -387,3 +387,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/demos/VisiWin.Toolkit.Demo.PlcSymbol/VisiWin.Toolkit.Demo.PlcSymbol.ldb
