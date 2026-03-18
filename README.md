@@ -54,9 +54,9 @@ Base classes for adapters and services that want to implement asynchronous logic
 [ExportAdapter(nameof(MainViewAdapter))]
 public class MainViewAdapter : AsyncAdapterBase
 {
-     public override async Task OnViewAttachedAsync(IView view)
+     protected override async Task OnViewAttachedAsync(IView view)
      {
-         base.OnViewAttachedAsync(view);
+         await base.OnViewAttachedAsync(view);
          await Task.Delay(1000); //your async code
      }
 }
