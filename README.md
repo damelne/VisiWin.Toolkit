@@ -9,23 +9,71 @@ It provides reusable components, utilities, and patterns to improve structure, m
 
 ## 📦 Projects
 
+### 🔹  VisiWin.Toolkit.Base
+
+**VisiWin.Toolkit.Base** provides foundational building blocks for the VisiWin.Toolkit ecosystem.
+
+It is a **.NET Standard 2.0** library containing common utilities, helper classes, and extension methods that are independent of VisiWin and WPF.
+
+> 🎯 Goal: Provide a clean, reusable, and testable foundation shared across all toolkit modules.
+
+#### ✨ Features
+
+- ✅ Common helper utilities  
+- ✅ Extension methods for everyday use  
+- ✅ No dependency on VisiWin or WPF  
+- ✅ Fully testable and reusable  
+- ✅ Compatible with multiple .NET platforms  
+
+#### 📦 Target Framework
+
+```text
+.NET Standard 2.0
+````
+---
 ### 🔹 ModernUI(WPF) Helper (MarkupExtensions, Converter...)
 
 Coming soon...
 
+---
 ### 🔹 Controls
 
 Coming soon...
 
+---
 ### 🔹 MEF Microsoft.DependencyInjection Adapter
 
 Coming soon...
 
-### 🔹 AsyncAdapter, AsyncService
+---
+### 🔹 Infrastructure
 
 Base classes for adapters and services that want to implement asynchronous logic in the adapter and service hooks (e.g. OnViewAttached, OnViewDetached, etc.).
-Coming soon...
 
+```csharp
+[ExportAdapter(nameof(MainViewAdapter))]
+public class MainViewAdapter : AsyncAdapterBase
+{
+     public override async Task OnViewAttachedAsync(IView view)
+     {
+         base.OnViewAttachedAsync(view);
+         await Task.Delay(1000); //your async code
+     }
+}
+
+[ExportService(typeof(ISettingsService))]
+[Export(typeof(ISettingsService))]
+public class SettingsService : AsyncServiceBase, ISettingsService
+{
+    protected override async Task OnLoadProjectCompletedAsync()
+    {
+        await base.OnLoadProjectCompletedAsync();
+        await Task.Delay(1000); //your async code
+    }
+}
+```
+
+---
 ### 🔹 PlcSymbol
 
 Provides a **type-safe way to define and use PLC symbols** instead of relying on raw string paths from VisiWin variable definitions.
