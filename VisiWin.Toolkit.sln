@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisiWin.Toolkit.Base", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisiWin.Toolkit.Demo.Infrastructure", "demos\VisiWin.Toolkit.Demo.Infrastructure\VisiWin.Toolkit.Demo.Infrastructure.csproj", "{05AEAFE9-3D7A-419D-9D46-9FF012FE31D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisiWin.Toolkit.Mef.Bridge", "src\VisiWin.Toolkit.Mef.Bridge\VisiWin.Toolkit.Mef.Bridge.csproj", "{3303566F-1C3A-462A-85C5-AA24DB59F3F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{05AEAFE9-3D7A-419D-9D46-9FF012FE31D2}.Debug|Any CPU.Build.0 = Debug|x86
 		{05AEAFE9-3D7A-419D-9D46-9FF012FE31D2}.Release|Any CPU.ActiveCfg = Release|x86
 		{05AEAFE9-3D7A-419D-9D46-9FF012FE31D2}.Release|Any CPU.Build.0 = Release|x86
+		{3303566F-1C3A-462A-85C5-AA24DB59F3F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3303566F-1C3A-462A-85C5-AA24DB59F3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3303566F-1C3A-462A-85C5-AA24DB59F3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3303566F-1C3A-462A-85C5-AA24DB59F3F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{05F48FD5-6CF7-409D-B335-0C98F53FA35C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{49415FD9-8ADF-4844-8A0B-76E4E67800B1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{05AEAFE9-3D7A-419D-9D46-9FF012FE31D2} = {3AC433C3-49C0-4B7B-9721-097DF649CA78}
+		{3303566F-1C3A-462A-85C5-AA24DB59F3F6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9365179-B2EB-4E8C-B5CD-1C9C6E08F056}
