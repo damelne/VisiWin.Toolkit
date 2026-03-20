@@ -17,8 +17,5 @@ namespace VisiWin.Toolkit.Mef.Bridge.Services
 
         public T GetService<T>() where T : class
             => _serviceProvider.GetRequiredService<T>();
-
-        //[Export(typeof(IMapper))]
-        //public IMapper Mapper => ServiceProvider.GetRequiredService<IMapper>();
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="Logger\GenericLogger.cs" />
     <Compile Include="Options\GenericOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DependencyInjectionExportProvider.cs" />
     <Compile Include="Services\ServiceLocatorBridge.cs" />
     <Compile Include="Validator\GenericValidator.cs" />
   </ItemGroup>
