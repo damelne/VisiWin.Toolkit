@@ -41,9 +41,48 @@ Coming soon...
 Coming soon...
 
 ---
-### 🔹 MEF Microsoft.DependencyInjection Adapter
+### 🔹 MEF Microsoft.DependencyInjection Bridge
 
-Coming soon...
+Bridges **MEF1** (`System.ComponentModel.Composition`) and **Microsoft.Extensions.DependencyInjection** so that DI-registered services are available as MEF imports — without manual `[Export]` wrappers for every type*.
+ 
+<img width="1440" height="1228" alt="grafik" src="https://github.com/user-attachments/assets/ca677528-7552-4627-9d08-a587ee4f592d" />
+
+ 
+#### How it works
+ 
+MEF1 does not support open generic exports natively. This library works around that with two complementary mechanisms:
+ 
+| Mechanism | Purpose |
+|---|---|
+| `ServiceLocatorBridge` | GetService<T>() |
+| `DependencyInjectionExportProvider` | Makes all DI-registered services available as MEF exports manually |
+| `GenericLogger<T>` / `GenericOptions<T>` / `GenericValidator<T>` | Typed open-generic adapters that delegate to the DI container at resolution time |
+ 
+Usage:
+ 
+```csharp
+[Export(typeof(IMyPart))]
+public class MyPart : IMyPart
+{
+    [ImportingConstructor]
+    public MyPart(ILogger<MyPart> logger) { }
+}
+```
+
+
+> **Note:** Services imported directly via `[Import]` require an explicit `[Export]` in the DependencyInjectionExportProvider.
+> Use `ServiceLocatorBridge.GetService<T>()` or the typed adapters to avoid this boilerplate.
+>
+> ```csharp
+> // requires a manual export in the DependencyInjectionExportProvider:
+> [Import]
+> private IMyDiService _myDiService;
+>
+> // no export needed — resolved via ServiceLocatorBridge:
+> [ImportingConstructor]
+> public MyPart(ServiceLocatorBridge bridge)
+>     => _myDiService = bridge.GetService<IMyDiService>();
+> ```
 
 ---
 ### 🔹 Infrastructure
@@ -89,7 +128,6 @@ Provides a **type-safe way to define and use PLC symbols** instead of relying on
   - XAML (via `MarkupExtension`)
   - MVVM / adapters
 
----
 
 #### 🔧 Example: Definition Class
 
@@ -104,7 +142,6 @@ namespace HMI.PlcSymbols
 }
 ```
 
----
 
 #### 🔧 Usage
 > [!NOTE]
