@@ -50,7 +50,6 @@ Bridges **MEF1** (`System.ComponentModel.Composition`) and **Microsoft.Extension
  
 #### How it works
  
-MEF1 does not support open generic exports natively. This library works around that with two complementary mechanisms:
  
 | Mechanism | Purpose |
 |---|---|
