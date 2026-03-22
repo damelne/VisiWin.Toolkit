@@ -45,7 +45,9 @@ Coming soon...
 
 Bridges **MEF1** (`System.ComponentModel.Composition`) and **Microsoft.Extensions.DependencyInjection** so that DI-registered services are available as MEF imports — without manual `[Export]` wrappers for every type*.
  
-<img width="1440" height="1228" alt="grafik" src="https://github.com/user-attachments/assets/ca677528-7552-4627-9d08-a587ee4f592d" />
+<img width="1840" height="1280" alt="grafik" src="https://github.com/user-attachments/assets/3ca1900e-d554-47db-98e2-c4980b3e6358" />
+
+
 
  
 #### How it works
